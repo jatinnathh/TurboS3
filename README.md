@@ -1,4 +1,5 @@
 # Oncogenesis
+Unable to deploy this project because the models were to large as they are built from scratch
 
 A full-stack oncology platform that combines appointment management, AI-powered cancer image classification, and digital prescription management into a single system for doctors and patients.
 
