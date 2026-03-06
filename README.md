@@ -1,4 +1,4 @@
-# Oncogenesis
+# Mediflow-3
 Unable to deploy this project because the models were to large as they are built from scratch
 
 A full-stack oncology platform that combines appointment management, AI-powered cancer image classification, and digital prescription management into a single system for doctors and patients.
@@ -7,7 +7,7 @@ A full-stack oncology platform that combines appointment management, AI-powered 
 
 ## Overview
 
-Oncogenesis is built for oncology workflows. Doctors can view their scheduled appointments, start video consultations, issue digital prescriptions, and run AI cancer classification on medical images. Patients can browse available doctors, book time slots, pay online, and access their prescriptions. Both roles share a classification history so past AI results are always on hand.
+Mediflow-3 is built for oncology workflows. Doctors can view their scheduled appointments, start video consultations, issue digital prescriptions, and run AI cancer classification on medical images. Patients can browse available doctors, book time slots, pay online, and access their prescriptions. Both roles share a classification history so past AI results are always on hand.
 
 ---
 
