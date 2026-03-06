@@ -37,7 +37,22 @@ Mediflow-3 is built for oncology workflows. Doctors can view their scheduled app
 ---
 
 ## Features
+### AI Cancer Image Classification
 
+**Classify an image** (`/classification`)
+
+- Supports three cancer types:
+  - **Brain Tumor** — classifies MRI scans into Glioma, Meningioma, No Tumor, or Pituitary
+  - **Lung Cancer** — classifies histopathology images into Adenocarcinoma, Benign Tissue, or Squamous Cell Carcinoma
+  - **Skin Cancer** — classifies lesion images into Actinic Keratoses, Basal Cell Carcinoma, Benign Keratosis, Dermatofibroma, Melanocytic Nevi, Melanoma, or Vascular Lesions
+- Upload via file picker or drag-and-drop (PNG, JPG, JPEG, BMP, TIFF, max 16 MB)
+- Returns predicted class and optionally shows full probability distribution for all classes with a confidence bar chart
+- Results are saved to Firestore after every successful classification
+### Gemini API integration for clinical support decisions
+- Possible diagnosis
+- Recommended tests
+- Risk assessment
+- 
 ### Authentication and Role Management
 
 - Email/password login via Firebase Authentication
@@ -110,17 +125,7 @@ Mediflow-3 is built for oncology workflows. Doctors can view their scheduled app
 
 ---
 
-### AI Cancer Image Classification
 
-**Classify an image** (`/classification`)
-
-- Supports three cancer types:
-  - **Brain Tumor** — classifies MRI scans into Glioma, Meningioma, No Tumor, or Pituitary
-  - **Lung Cancer** — classifies histopathology images into Adenocarcinoma, Benign Tissue, or Squamous Cell Carcinoma
-  - **Skin Cancer** — classifies lesion images into Actinic Keratoses, Basal Cell Carcinoma, Benign Keratosis, Dermatofibroma, Melanocytic Nevi, Melanoma, or Vascular Lesions
-- Upload via file picker or drag-and-drop (PNG, JPG, JPEG, BMP, TIFF, max 16 MB)
-- Returns predicted class and optionally shows full probability distribution for all classes with a confidence bar chart
-- Results are saved to Firestore after every successful classification
 
 **Brain tumor preprocessing pipeline (server-side)**
 
