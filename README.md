@@ -52,7 +52,7 @@ Mediflow-3 is built for oncology workflows. Doctors can view their scheduled app
 - Possible diagnosis
 - Recommended tests
 - Risk assessment
-- 
+  
 ### Authentication and Role Management
 
 - Email/password login via Firebase Authentication
