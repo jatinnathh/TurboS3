@@ -10,6 +10,20 @@ A full-stack oncology platform that combines appointment management, AI-powered 
 Mediflow-3 is built for oncology workflows. Doctors can view their scheduled appointments, start video consultations, issue digital prescriptions, and run AI cancer classification on medical images. Patients can browse available doctors, book time slots, pay online, and access their prescriptions. Both roles share a classification history so past AI results are always on hand.
 
 ---
+<p align="center">
+  <img src="https://github.com/jatinnathh/TurboS3/blob/main/public/Screenshot%202026-03-07%20002001.png" width="900"/>
+  <img src="https://github.com/jatinnathh/TurboS3/blob/main/public/Screenshot%202026-03-07%20002207.png" width="900"/>
+</p>
+
+<p align="center">
+  <img src="https://github.com/jatinnathh/TurboS3/blob/main/public/Screenshot%202026-03-07%20005510.png" width="900"/>
+  <img src="https://github.com/jatinnathh/TurboS3/blob/main/public/Screenshot%202026-03-07%20011648.png" width="900"/>
+</p>
+
+<p align="center">
+  <img src="https://github.com/jatinnathh/TurboS3/blob/main/public/Screenshot%202026-03-07%20011714.png" width="900"/>
+  <img src="https://github.com/jatinnathh/TurboS3/blob/main/public/Screenshot%202026-03-07%20012016.png" width="900"/>
+</p>
 
 ## Tech Stack
 
