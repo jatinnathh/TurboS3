@@ -1,0 +1,77 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Dependencies
+node_modules
+
+# Build output
+dist
+dist-ssr
+*.local
+
+# ===========================================
+# Backend (not needed to run frontend)
+# ===========================================
+backend/
+
+# ===========================================
+# Uploads
+# ===========================================
+uploads/
+
+# ===========================================
+# AI / ML model weights & checkpoints
+# ===========================================
+*.ckpt
+*.pt
+*.pth
+*.safetensors
+*.bin
+*.onnx
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+models/
+checkpoints/
+
+# ===========================================
+# Training data & datasets
+# ===========================================
+data/
+*.csv
+*.parquet
+*.npy
+*.npz
+
+# ===========================================
+# Python (venvs, caches, notebooks)
+# ===========================================
+venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# ===========================================
+# Misc
+# ===========================================
+roles.txt
+run_final.md
+placeholder.jpg
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

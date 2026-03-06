@@ -1,0 +1,581 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.dashboard-container {
+  min-height: 100vh;
+  background: var(--bg-primary);
+  position: relative;
+}
+
+/* Header */
+.dashboard-header {
+  background: var(--bg-card);
+  padding: 20px 50px;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.dashboard-header h1 {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+.user-type-badge {
+  padding: 6px 14px;
+  background: rgba(59, 130, 246, 0.15);
+  border-radius: 20px;
+  color: var(--accent-primary);
+  font-size: 13px;
+  font-weight: 600;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.user-type-badge i {
+  font-size: 12px;
+}
+
+.appointments-button {
+  padding: 10px 20px;
+  background: var(--accent-primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.appointments-button:hover {
+  background: var(--accent-secondary);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.appointments-button i {
+  font-size: 13px;
+}
+
+.classification-button {
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.classification-button:hover {
+  background: linear-gradient(135deg, #5568d3 0%, #6a3f8f 100%);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.classification-button i {
+  font-size: 13px;
+}
+
+.logout-button {
+  padding: 10px 24px;
+  background: rgba(239, 68, 68, 0.15);
+  color: var(--accent-error);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logout-button:hover {
+  background: var(--accent-error);
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.logout-button i {
+  font-size: 13px;
+}
+
+/* Content */
+.dashboard-content {
+  padding: 40px 50px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.welcome-card {
+  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+  padding: 48px 50px;
+  border-radius: 16px;
+  box-shadow: var(--shadow-xl);
+  margin-bottom: 40px;
+  border: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.welcome-card::before {
+  content: '\f7f0';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  position: absolute;
+  right: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 120px;
+  opacity: 0.15;
+  color: white;
+}
+
+.welcome-card h2 {
+  margin: 0 0 12px 0;
+  color: #ffffff;
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  position: relative;
+  z-index: 1;
+}
+
+.welcome-card p {
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+}
+
+/* Doctors Section */
+.doctors-section {
+  background: transparent;
+  padding: 0;
+}
+
+.doctors-section h3 {
+  margin: 0 0 28px 0;
+  color: var(--text-primary);
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.no-doctors {
+  text-align: center;
+  color: var(--text-secondary);
+  padding: 60px 40px;
+  font-size: 16px;
+  background: var(--bg-card);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+}
+
+.doctors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 24px;
+}
+
+.doctor-card {
+  background: var(--bg-card);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-md);
+}
+
+.doctor-card:hover {
+  box-shadow: var(--shadow-xl);
+  transform: translateY(-4px);
+  border-color: var(--accent-primary);
+}
+
+.doctor-header {
+  display: flex;
+  gap: 20px;
+  padding: 24px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.doctor-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--border-color);
+  flex-shrink: 0;
+}
+
+.doctor-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.doctor-info h4 {
+  margin: 0 0 8px 0;
+  color: var(--text-primary);
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+}
+
+.specialization {
+  color: var(--accent-primary);
+  font-weight: 600;
+  margin: 0 0 6px 0;
+  font-size: 14px;
+}
+
+.department {
+  color: var(--text-secondary);
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/* Slots Section */
+.slots-section {
+  padding: 24px;
+  background: var(--bg-secondary);
+}
+
+.slots-label {
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+  font-size: 15px;
+}
+
+.slots-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 10px;
+}
+
+.slot-button {
+  padding: 12px 10px;
+  border: 1.5px solid var(--border-color);
+  background: var(--bg-tertiary);
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  color: var(--text-primary);
+}
+
+.slot-button.available {
+  border-color: var(--accent-success);
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--accent-success);
+}
+
+.slot-button.available:hover:not(:disabled) {
+  background: var(--accent-success);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+}
+
+.slot-button.available::after {
+  content: 'Available';
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.slot-button.booked {
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
+  color: var(--text-muted);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.slot-button.booked::after {
+  content: 'Booked';
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.slot-button:disabled {
+  cursor: not-allowed;
+}
+
+.booked-badge {
+  display: none;
+}
+
+/* Price Section */
+.appointment-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  background: var(--bg-card);
+  color: var(--text-primary);
+  border-top: 1px solid var(--border-color);
+}
+
+.appointment-price span {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.appointment-price strong {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--accent-success);
+  letter-spacing: -0.5px;
+}
+
+/* Payment Overlay */
+.payment-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.payment-loader {
+  background: var(--bg-card);
+  padding: 40px 50px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: var(--shadow-xl);
+  border: 1px solid var(--border-color);
+}
+
+.spinner {
+  border: 4px solid var(--bg-tertiary);
+  border-top: 4px solid var(--accent-primary);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 0.8s linear infinite;
+  margin: 0 auto 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.payment-loader p {
+  color: var(--text-primary);
+  font-weight: 600;
+  margin: 0;
+  font-size: 16px;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+  background: var(--bg-primary);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .doctors-grid {
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-header {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+    padding: 16px 24px;
+  }
+  
+  .header-left {
+    width: 100%;
+  }
+
+  .header-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .dashboard-header h1 {
+    font-size: 22px;
+  }
+
+  .appointments-button,
+  .logout-button {
+    width: 100%;
+  }
+  
+  .dashboard-content {
+    padding: 24px 20px;
+  }
+
+  .welcome-card {
+    padding: 36px 28px;
+  }
+
+  .welcome-card::before {
+    font-size: 80px;
+    right: 28px;
+  }
+
+  .welcome-card h2 {
+    font-size: 28px;
+  }
+
+  .welcome-card p {
+    font-size: 16px;
+  }
+
+  .doctors-section h3 {
+    font-size: 20px;
+  }
+
+  .doctors-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .doctor-header {
+    padding: 20px;
+  }
+
+  .doctor-info h4 {
+    font-size: 17px;
+  }
+
+  .slots-section {
+    padding: 20px;
+  }
+
+  .slots-grid {
+    grid-template-columns: repeat(auto-fill, minmax(85px, 1fr));
+    gap: 8px;
+  }
+
+  .slot-button {
+    padding: 10px 8px;
+    font-size: 13px;
+  }
+
+  .appointment-price {
+    padding: 16px 20px;
+  }
+
+  .appointment-price strong {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-content {
+    padding: 20px 16px;
+  }
+
+  .welcome-card {
+    padding: 32px 24px;
+    border-radius: 12px;
+  }
+
+  .welcome-card::before {
+    font-size: 60px;
+    right: 24px;
+  }
+
+  .welcome-card h2 {
+    font-size: 24px;
+  }
+
+  .welcome-card p {
+    font-size: 15px;
+  }
+
+  .doctors-section h3 {
+    font-size: 18px;
+  }
+
+  .doctor-header {
+    padding: 16px;
+  }
+
+  .slots-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .payment-loader {
+    padding: 32px 40px;
+  }
+}
