@@ -7,13 +7,13 @@ import { getStorage } from "firebase/storage";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCTRjbLC2Oe1dHLT0hIcSazr3lT5Rhaf7k",
-  authDomain: "oncogenesis-c7bad.firebaseapp.com",
-  projectId: "oncogenesis-c7bad",
-  storageBucket: "oncogenesis-c7bad.firebasestorage.app",
-  messagingSenderId: "371675542846",
-  appId: "1:371675542846:web:738bb084509bc99b8be86f",
-  measurementId: "G-PKGGTKKPS6",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
 };
 
 // Initialize Firebase

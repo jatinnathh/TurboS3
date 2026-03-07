@@ -873,6 +873,62 @@ const DoctorDashboard: React.FC = () => {
                 <span>View Prescriptions</span>
                 <i className="fas fa-arrow-right"></i>
               </div>
+              </div>
+
+            {/* Consult with Gemini Card */}
+            <div 
+              onClick={() => handleNavigate('/doctor/gemini-consult')}
+              style={{
+                padding: '20px',
+                borderRadius: '12px',
+                backgroundColor: '#ede7f6',
+                border: '2px solid #7c4dff',
+                cursor: 'pointer',
+                transition: 'all 0.3s',
+                boxShadow: '0 2px 8px rgba(124, 77, 255, 0.15)'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-4px)';
+                e.currentTarget.style.boxShadow = '0 4px 16px rgba(124, 77, 255, 0.3)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.boxShadow = '0 2px 8px rgba(124, 77, 255, 0.15)';
+              }}
+            >
+              <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px' }}>
+                <div style={{ 
+                  width: '48px', 
+                  height: '48px', 
+                  borderRadius: '50%', 
+                  background: 'linear-gradient(135deg, #667eea, #764ba2)', 
+                  display: 'flex', 
+                  alignItems: 'center', 
+                  justifyContent: 'center',
+                  fontSize: '24px',
+                  color: 'white'
+                }}>
+                  <i className="fas fa-robot"></i>
+                </div>
+                <h4 style={{ margin: 0, color: '#4a148c', fontSize: '18px', fontWeight: '600' }}>
+                  Consult with Gemini
+                </h4>
+              </div>
+              <p style={{ margin: 0, color: '#666', fontSize: '14px', lineHeight: '1.6' }}>
+                Enter patient symptoms and get AI-powered diagnosis suggestions, tests, and risk levels
+              </p>
+              <div style={{ 
+                marginTop: '12px', 
+                color: '#7c4dff', 
+                fontSize: '13px', 
+                fontWeight: '600',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '6px'
+              }}>
+                <span>Start Consultation</span>
+                <i className="fas fa-arrow-right"></i>
+              </div>
             </div>
           </div>
 

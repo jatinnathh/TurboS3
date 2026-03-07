@@ -79,7 +79,7 @@ const Login: React.FC = () => {
     <div className="login-container">
       <div className="login-brand">
         <div className="brand-content">
-          <h1 className="brand-title">OncoGenesis</h1>
+          <h1 className="brand-title">Mediflow-3</h1>
           <p className="brand-description">
             Your Partner in Smarter Care 
           </p>

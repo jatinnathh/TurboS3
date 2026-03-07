@@ -13,6 +13,7 @@ import ClassificationHistory from './pages/ClassificationHistory/ClassificationH
 import PatientRecordViewer from './pages/PatientRecords/PatientRecordViewer';
 import PatientPrescriptionViewer from './pages/Prescription/PatientPrescriptionViewer';
 import DoctorPrescriptionHistory from './pages/Prescription/DoctorPrescriptionHistory';
+import GeminiConsult from './pages/GeminiConsult/GeminiConsult';
 import './App.css';
 function App() {
   return (
@@ -125,6 +126,16 @@ function App() {
             element={
               <PrivateRoute>
                 <DoctorPrescriptionHistory />
+              </PrivateRoute>
+            }
+          />
+
+          {/* Gemini AI Consultation */}
+          <Route
+            path="/doctor/gemini-consult"
+            element={
+              <PrivateRoute>
+                <GeminiConsult />
               </PrivateRoute>
             }
           />
