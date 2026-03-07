@@ -1,4 +1,5 @@
-# Oncogenesis
+# Mediflow-3
+Unable to deploy this project because the models were to large as they are built from scratch
 
 A full-stack oncology platform that combines appointment management, AI-powered cancer image classification, and digital prescription management into a single system for doctors and patients.
 
@@ -6,9 +7,23 @@ A full-stack oncology platform that combines appointment management, AI-powered 
 
 ## Overview
 
-Oncogenesis is built for oncology workflows. Doctors can view their scheduled appointments, start video consultations, issue digital prescriptions, and run AI cancer classification on medical images. Patients can browse available doctors, book time slots, pay online, and access their prescriptions. Both roles share a classification history so past AI results are always on hand.
+Mediflow-3 is built for oncology workflows. Doctors can view their scheduled appointments, start video consultations, issue digital prescriptions, and run AI cancer classification on medical images. Patients can browse available doctors, book time slots, pay online, and access their prescriptions. Both roles share a classification history so past AI results are always on hand.
 
 ---
+<p align="center">
+  <img src="https://github.com/jatinnathh/TurboS3/blob/main/public/Screenshot%202026-03-07%20002001.png" width="900"/>
+  <img src="https://github.com/jatinnathh/TurboS3/blob/main/public/Screenshot%202026-03-07%20002207.png" width="900"/>
+</p>
+
+<p align="center">
+  <img src="https://github.com/jatinnathh/TurboS3/blob/main/public/Screenshot%202026-03-07%20005510.png" width="900"/>
+  <img src="https://github.com/jatinnathh/TurboS3/blob/main/public/Screenshot%202026-03-07%20011648.png" width="900"/>
+</p>
+
+<p align="center">
+  <img src="https://github.com/jatinnathh/TurboS3/blob/main/public/Screenshot%202026-03-07%20011714.png" width="900"/>
+  <img src="https://github.com/jatinnathh/TurboS3/blob/main/public/Screenshot%202026-03-07%20012016.png" width="900"/>
+</p>
 
 ## Tech Stack
 
@@ -36,7 +51,22 @@ Oncogenesis is built for oncology workflows. Doctors can view their scheduled ap
 ---
 
 ## Features
+### AI Cancer Image Classification
 
+**Classify an image** (`/classification`)
+
+- Supports three cancer types:
+  - **Brain Tumor** — classifies MRI scans into Glioma, Meningioma, No Tumor, or Pituitary
+  - **Lung Cancer** — classifies histopathology images into Adenocarcinoma, Benign Tissue, or Squamous Cell Carcinoma
+  - **Skin Cancer** — classifies lesion images into Actinic Keratoses, Basal Cell Carcinoma, Benign Keratosis, Dermatofibroma, Melanocytic Nevi, Melanoma, or Vascular Lesions
+- Upload via file picker or drag-and-drop (PNG, JPG, JPEG, BMP, TIFF, max 16 MB)
+- Returns predicted class and optionally shows full probability distribution for all classes with a confidence bar chart
+- Results are saved to Firestore after every successful classification
+### Gemini API integration for clinical support decisions
+- Possible diagnosis
+- Recommended tests
+- Risk assessment
+  
 ### Authentication and Role Management
 
 - Email/password login via Firebase Authentication
@@ -109,17 +139,7 @@ Oncogenesis is built for oncology workflows. Doctors can view their scheduled ap
 
 ---
 
-### AI Cancer Image Classification
 
-**Classify an image** (`/classification`)
-
-- Supports three cancer types:
-  - **Brain Tumor** — classifies MRI scans into Glioma, Meningioma, No Tumor, or Pituitary
-  - **Lung Cancer** — classifies histopathology images into Adenocarcinoma, Benign Tissue, or Squamous Cell Carcinoma
-  - **Skin Cancer** — classifies lesion images into Actinic Keratoses, Basal Cell Carcinoma, Benign Keratosis, Dermatofibroma, Melanocytic Nevi, Melanoma, or Vascular Lesions
-- Upload via file picker or drag-and-drop (PNG, JPG, JPEG, BMP, TIFF, max 16 MB)
-- Returns predicted class and optionally shows full probability distribution for all classes with a confidence bar chart
-- Results are saved to Firestore after every successful classification
 
 **Brain tumor preprocessing pipeline (server-side)**
 
